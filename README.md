@@ -25,13 +25,15 @@ $ composer require oanhnn/laravel-flash-message
 Next, if using Laravel 5.4+, include the service provider within your `config/app.php` file.
 
 ```php
+// config/app.php
+
     'providers' => [
         // Other service providers...
 
         Laravel\FlashMessage\FlashMessageServiceProvider::class,
     ],
     
-    '' => [
+    'aliases' => [
         // Other alias classes
         
         'Flash' => Laravel\FlashMessage\Facades\Flash::class,
@@ -63,7 +65,7 @@ You may also do:
 | `Flash::error('message')`                   | Set the flash message with theme "error alert".        |
 | `Flash::info('message')`                    | Set the flash message with theme "info alert".         |
 | `Flash::info('message')->important()`       | Add a close button to the flash message.               |
-| `Flash::info('message')->overlay('title'')` | Display flash message as a modal overlay with a title. |
+| `Flash::info('message')->overlay('title')`  | Display flash message as a modal overlay with a title. |
 
 ## Changelog
 
