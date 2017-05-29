@@ -18,7 +18,7 @@ This composer package offers a Twitter Bootstrap optimized flash messaging setup
 
 Begin by pulling in the package through Composer.
 
-```shell
+```bash
 $ composer require oanhnn/laravel-flash-message
 ```
 
@@ -56,6 +56,7 @@ public function save()
     return redirect('/home');
 }
 ```
+
 You may also do:
 
 | method                                      | description                                            |
@@ -66,6 +67,12 @@ You may also do:
 | `Flash::info('message')`                    | Set the flash message with theme "info alert".         |
 | `Flash::info('message')->important()`       | Add a close button to the flash message.               |
 | `Flash::info('message')->overlay('title')`  | Display flash message as a modal overlay with a title. |
+
+And include flash message view into your blade template.
+ 
+```php
+@include('flash::message');
+```
 
 ## Changelog
 
