@@ -5,6 +5,7 @@
 /phpcs.xml
 /vendor
 /build
+/storage
 
 # IDE and editor specific files #
 #################################

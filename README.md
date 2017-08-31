@@ -71,7 +71,7 @@ You may also do:
 And include flash message view into your blade template.
  
 ```php
-@include('flash::message');
+@include('flash::message')
 ```
 
 ## Changelog

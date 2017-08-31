@@ -17,10 +17,10 @@ class Message implements \ArrayAccess
      */
     public function __construct(string $message, string $level)
     {
-        $this->data = $this->update([
+        $this->data = [
             'message' => $message,
             'level' => $level,
-        ]);
+        ];
     }
 
     /**
@@ -63,7 +63,7 @@ class Message implements \ArrayAccess
      *
      * @param array $attributes
      */
-    public function update($attributes = [])
+    public function update(array $attributes = [])
     {
         $this->data = array_merge($this->data, $attributes);
     }

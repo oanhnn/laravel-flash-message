@@ -1,44 +1,60 @@
 {
-    "name": "oanhnn/laravel-flash-message",
-    "type": "library",
-    "description": "Laravel Flash Message for Laravel 5.4+",
-    "keyworks": ["laravel","package","flash","flash message","session"],
-    "license": "MIT",
-    "homepage": "https://github.com/oanhnn/laravel-flash-message",
-    "support": {
-        "issues": "https://github.com/oanhnn/laravel-flash-message/issues",
-        "source": "https://github.com/oanhnn/laravel-flash-message"
-    },
-    "authors": [
-        {
-            "name": "Oanh Nguyen",
-            "email": "oanhnn.bk@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Laravel\\FlashMessage\\": "src/"
-        }
-    },
-    "require": {
-        "php": ">=7.0",
-        "illuminate/contracts": "5.4.*",
-        "illuminate/session": "5.4.*",
-        "illuminate/support": "5.4.*"
-    },
-    "require-dev": {
-        "mockery/mockery": "~0.9",
-        "phpunit/phpunit": "~6.1",
-        "squizlabs/php_codesniffer": "^3.0"
-    },
-    "scripts": {
-        "phpunit": "php vendor/phpunit/phpunit/phpunit --coverage-html storage/coverage",
-        "phpcs": "php vendor/squizlabs/php_codesniffer/bin/phpcs",
-        "phpcbf": "php vendor/squizlabs/php_codesniffer/bin/phpcbf"
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true
+  "name": "oanhnn/laravel-flash-message",
+  "type": "library",
+  "description": "Laravel Flash Message for Laravel 5.4+",
+  "keyworks": [
+    "laravel",
+    "package",
+    "flash",
+    "flash message",
+    "session"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/oanhnn/laravel-flash-message",
+  "support": {
+    "issues": "https://github.com/oanhnn/laravel-flash-message/issues",
+    "source": "https://github.com/oanhnn/laravel-flash-message"
+  },
+  "authors": [
+    {
+      "name": "Oanh Nguyen",
+      "email": "oanhnn.bk@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Laravel\\FlashMessage\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "illuminate/contracts": "5.4.*|5.5.*",
+    "illuminate/session": "5.4.*|5.5.*",
+    "illuminate/support": "5.4.*|5.5.*"
+  },
+  "require-dev": {
+    "mockery/mockery": "~0.9",
+    "phpunit/phpunit": "~6.1",
+    "squizlabs/php_codesniffer": "^3.0"
+  },
+  "scripts": {
+    "phpunit": "php vendor/phpunit/phpunit/phpunit --coverage-html storage/coverage",
+    "phpcs": "php vendor/squizlabs/php_codesniffer/bin/phpcs",
+    "phpcbf": "php vendor/squizlabs/php_codesniffer/bin/phpcbf"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Laravel\\FlashMessage\\FlashMessageServiceProvider"
+      ],
+      "aliases": {
+        "Flash": "Laravel\\FlashMessage\\Facades\\Flash"
+      }
+    }
+  }
 }

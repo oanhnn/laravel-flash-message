@@ -60,7 +60,7 @@ class Notifier
     public function message(string $message, string $level = null)
     {
         $this->messages->push(new Message($message, $level ?? 'info'));
-        $this->session->flash(self::SESSION_KEY, $this->messages);
+        $this->session->flash(self::SESSION_KEY, $this->messages->all());
 
         return $this;
     }
