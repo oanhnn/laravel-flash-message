@@ -2,7 +2,7 @@
   "name": "oanhnn/laravel-flash-message",
   "type": "library",
   "description": "Laravel Flash Message for Laravel 5.4+",
-  "keyworks": [
+  "keywords": [
     "laravel",
     "package",
     "flash",

@@ -22,7 +22,7 @@ Begin by pulling in the package through Composer.
 $ composer require oanhnn/laravel-flash-message
 ```
 
-Next, if using Laravel 5.4+, include the service provider within your `config/app.php` file.
+Next, if using Laravel 5.5+, you done. If using Laravel 5.4, include the service provider within your `config/app.php` file.
 
 ```php
 // config/app.php
@@ -76,25 +76,32 @@ And include flash message view into your blade template.
 
 ## Changelog
 
-See all change logs in [CHANGELOG.md][changelog]
+See all change logs in [CHANGELOG](CHANGELOG.md)
+
+## Testing
+
+```bash
+$ git clone git@github.com/oanhnn/laravel-flash-message.git /path
+$ cd /path
+$ composer install
+$ composer phpunit
+```
 
 ## Contributing
 
-All code contributions must go through a pull request and approved by
-a core developer before being merged. This is to ensure proper review of all the code.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-Fork the project, create a feature branch, and send a pull request.
+## Security
 
-To ensure a consistent code base, you should make sure the code follows the [PSR-2][psr2].
+If you discover any security related issues, please email to [Oanh Nguyen](mailto:oanhnn.bk@gmail.com) instead of 
+using the issue tracker.
 
-If you would like to help take a look at the [list of issues][issues].
+## Credits
 
-License
----
+- [Oanh Nguyen](https://github.com/oanhnn)
+- [All Contributors](../../contributors)
+
+## License
+
 This project is released under the MIT License.   
-Copyright © 2017 [Oanh Nguyen](https://oanhnn.github.io/).
-
-
-[changelog]: https://github.com/oanhnn/laravel-flash-message/blob/master/CHANGELOG.md
-[psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
-[issues]: https://github.com/oanhnn/laravel-flash-message/issues
+Copyright © 2017-2018 [Oanh Nguyen](https://oanhnn.github.io/).
